@@ -4,4 +4,4 @@
 - css
 - javascript
 
-learning basics
+made js..
