@@ -9,50 +9,52 @@
   </head>
   <body>
     <div id="container">
+      <h1>Employee Informatioon</h1>
       <form id="employee-form" action="">
-        <div>
+        <div class="margin">
           <label for="first-name">First Name: </label>
           <input type="text" name="first-name" id="first-name" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="last-name">Last Name: </label>
           <input type="text" name="last-name" id="last-name" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="designation">Designation: </label>
           <input type="text" name="designation" id="designation" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="date-of-joining">Date of Joining: </label>
           <input type="text" name="date-of-joining" id="date-of-joining" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="salary">Salary: </label>
           <input type="text" name="salary" id="salary" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="email">Email: </label>
           <input type="text" name="email" id="email" />
         </div>
 
-        <div>
+        <div class="margin">
           <label for="mobile">Mobile: </label>
           <input type="text" name="mobile" id="mobile" />
         </div>
 
-        <div>
+        <div class="margin">
           <input type="button" value="Create" onclick="addEmployee()" />
         </div>
       </form>
+      <div class="margin">
+        <input type="button" value="Show" onclick="showEmployee()" />
+      </div>
 
-      <input type="button" value="Show" onclick="showEmployee()" />
-
-      <div id="view"></div>
+      <div class="margin" id="view"></div>
     </div>
 
     <script src="employee.js"></script>

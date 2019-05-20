@@ -20,7 +20,7 @@ class Employee {
   }
 }
 
-const employee1 = new Employee();
+var employees = [];
 
 function addEmployee() {
   let firstName = document.querySelector('#first-name').value;
@@ -31,36 +31,52 @@ function addEmployee() {
   let email = document.querySelector('#email').value;
   let mobile = document.querySelector('#mobile').value;
 
-  employee1.firstName = firstName;
-  employee1.lastName = lastName;
-  employee1.designation = designation;
-  employee1.dateOfJoining = dateOfJoining;
-  employee1.salary = salary;
-  employee1.email = email;
-  employee1.mobile = mobile;
+  const emp = new Employee(
+    firstName,
+    lastName,
+    designation,
+    dateOfJoining,
+    salary,
+    email,
+    mobile
+  );
+
+  employees.push(emp);
 }
 
 function showEmployee() {
-  let view = `<table border="1">
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Designation</th>
-      <th>Date of Joining</th>
-      <th>Salary</th>
-      <th>Email</th>
-      <th>Mobile</th>
-    </tr>
-    <tr>
-      <td>${employee1.firstName}</td>
-      <td>${employee1.lastName}</td>
-      <td>${employee1.designation}</td>
-      <td>${employee1.dateOfJoining}</td>
-      <td>${employee1.salary}</td>
-      <td>${employee1.email}</td>
-      <td>${employee1.mobile}</td>
-    </tr>
-</table>`;
+  var view = document.querySelector('#view');
+  var eTable = '';
+  var i = 0,
+    j = 0;
+  for (let employee of employees) {
+    eTable += `<table>
+      <caption>Employee #${++i}</caption>
+      <tr>
+        <th>Full Name</th>
+        <td>${employee.firstName + ' ' + employee.lastName}</td>
+      </tr>
+      <tr>
+        <th>Designation</th>
+        <td>${employee.designation}</td>
+      </tr>
+      <tr>
+        <th>Date of Joining</th>
+        <td>${employee.dateOfJoining}</td>
+      </tr>
+      <tr>
+        <th>Salary</th>
+        <td>${employee.salary}</td>
+      </tr>
+        <th>Email</th>
+        <td>${employee.email}</td>
+      </tr>
+      <tr>
+        <th>Mobile</th>
+        <td>${employee.mobile}</td>
+      </tr>
+      `;
+  }
 
-  document.querySelector('#view').innerHTML = view;
+  view.innerHTML = eTable;
 }

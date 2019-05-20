@@ -1,4 +1,36 @@
 /*css goes here*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
+  margin-top: 10px;
+}
+
+table caption {
+  font-weight: bolder;
+  background-color: yellow;
+}
+
+table,
+th,
+td {
+  border: 1px solid red;
+  border-collapse: collapse;
+  padding: 4px;
+}
+
 #container {
-  background-color: grey;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 70%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.margin {
+  margin: 10px;
+}
+label {
+  display: block;
 }
